@@ -96,7 +96,7 @@ def instagram(request):
            'product' : product,
            'massage' : massage,
        }
-       message = render_to_string('donate/email2.html', ctx)
+       message = render_to_string('donate/email3.html', ctx)
        send_mail('Contact Form',
         message,
         settings.EMAIL_HOST_USER,
@@ -116,7 +116,7 @@ def instagram1(request):
            'product' : product,
            'massage' : massage,
        }
-       message = render_to_string('donate/email2.html', ctx)
+       message = render_to_string('donate/email3.html', ctx)
        send_mail('Contact Form',
         message,
         settings.EMAIL_HOST_USER,
